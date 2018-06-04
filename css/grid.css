@@ -1,0 +1,24 @@
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: 20px 0;
+}
+
+*[class*="col"] .img{
+	width: 100%;
+}
+
+.col-1{
+	width: 32%;
+}
+
+.col-2{
+	width: 66%;
+}
+
+.col-3{
+	width: 100%
+}
