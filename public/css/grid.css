@@ -27,16 +27,7 @@ img{
     position: relative;
     margin: 30px 0;
 }
-/*
-@media screen {
-    .col-3{width: 100%;}
-    .col-2{width: 100%;}
-    .col-1{width: 100%;}
-}
 
-@media screen(1209) {
-}
-*/
 @media (max-width: 1150px) {
     .col-3{width: 100%;}
     .col-2{width: 100%;}

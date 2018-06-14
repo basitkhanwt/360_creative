@@ -21,7 +21,7 @@
 		include 'mysql.inc.php';
 	}
 
-	public function ProjectOpen(id)//project open
+	public function ProjectOpen()//project open
 	{
 		include 'mysql.inc.php';
 	}

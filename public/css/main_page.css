@@ -1,30 +1,16 @@
-.left_text{
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-.right_text{
-	position: absolute;
-	top: 0;
-	right: 0;
-	text-align: right;
-}
-
 .header{
 	position: relative;
 	width: 100%;
-	min-height: 350px;
+	min-height: 360px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 
 .logo{
-	width: 150px;
-	height: 150px;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	transform: translate(-50%, -50%);
+	width: 186px;
+    height: 186px;
 }
 
 .logo img{
@@ -32,18 +18,15 @@
 }
 
 .project{
-	margin-bottom: 40px;
-}
-.project img{
-	width: 100%;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
 }
 
-.navbar{
-	position: relative;
+.project img{
 	width: 100%;
-	margin-top: 40px; 
-	display: flex;
-	justify-content: center;
 }
 
 .navbar .highlighted_text{
@@ -52,34 +35,13 @@
 	text-rendering: geometricPrecision;
 }
 
-.projects{
-	margin-top: 100px;
+.right_text{
+	font-family:"Gotham-bold";
+	font-size: 36px;
+	color: #000000;
+	text-transform: uppercase;
 }
 
-.navbar-item{
-	margin: 0 20px;
-	padding: 10px 15px 8px 15px;
-	transition: 0.2s cubic-bezier(.17,.84,.44,1);
-	position: relative;
+.header>div{
+	padding: 0 50px;
 }
-
-.navbar-item::after{
-	content: "";
-	width: 100%;
-	height: 0;
-	position: absolute;
-	background: rgba(255,242,0,1);
-	transition: 0.2s cubic-bezier(.17,.84,.44,1);
-	bottom: 0;
-	left: 0;
-	z-index: -1;
-}
-
-.navbar-item:hover::after{
-	height: 100%;
-}
-
-.description{
-	margin-top: 10px;  
-}
-

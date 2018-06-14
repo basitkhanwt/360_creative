@@ -1,8 +1,6 @@
 # 360 creative. branding agency
 
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
-
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, dolorem laboriosam ea soluta eius, sint in facere excepturi commodi totam, numquam eos magnam! Deserunt sunt alias quibusdam libero esse atque.
 
 ### Website structure
 
@@ -12,22 +10,9 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - Team
 
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab voluptates accusantium hic perferendis at quisquam quidem veniam quia, nemo odio neque omnis animi praesentium ipsum quaerat quam soluta sunt obcaecati.</div>
+<div>Fuga voluptate, sed fugit consequuntur, officia, sit facere eligendi hic perferendis et aperiam incidunt qui cum provident quas perspiciatis architecto explicabo sequi, nobis. Inventore possimus excepturi nemo consectetur fugiat dicta.</div>
 
-## Learning Laravel
+## lorem ipsum dolor sit amet
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat natus officiis, deserunt ullam ab quia explicabo, voluptate amet, molestiae libero alias asperiores, sed sint quo facilis qui expedita ratione saepe non! Similique iure culpa voluptatibus, obcaecati ex quae sunt quia, voluptatem doloribus dignissimos assumenda placeat! Aliquam amet harum laudantium facilis ullam, illum quibusdam autem, minima ratione alias dignissimos quae voluptas eos rem, reiciendis necessitatibus libero veniam dicta temporibus ducimus odit! Nobis dolores autem quo iusto eum asperiores ab doloremque soluta quidem explicabo! Labore ex nobis ipsum vero, illum aliquam est quasi iusto, sint voluptatibus nam, nemo neque facere consectetur perferendis, laborum deleniti reprehenderit voluptates in sequi eos explicabo? Explicabo distinctio in voluptatum vero. Beatae minus consequatur corporis asperiores, odit id iure. Magnam aut, ea architecto odit nostrum dolores similique dolor, consectetur distinctio voluptatum harum, dolorem incidunt quasi, sequi nulla aliquam inventore ratione optio vel ipsum obcaecati tempora a. Suscipit nisi culpa, aut rerum possimus cupiditate porro quos mollitia consequuntur, omnis eligendi cumque sit amet velit sunt voluptate! Explicabo, eum atque architecto hic neque placeat nulla reprehenderit enim eligendi ut unde consequuntur eveniet esse dicta, molestiae mollitia quae suscipit animi exercitationem laudantium! Amet delectus velit ullam, tempore soluta dolores impedit eos.

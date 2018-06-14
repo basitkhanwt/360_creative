@@ -1,14 +1,26 @@
+<?php 
+	$page_title = "Roots";
+        $project_name = "Roots";
+        function get_navbar($project_name){
+            echo `asdasd`;
+        }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Project name</title>
-	<link rel="stylesheet" href="../css/reset.css">
+	<title>
+		<?php echo $page_title ?>
+	</title>
 	<link rel="stylesheet" href="../css/ui.css">
-	<link rel="stylesheet" href="../css/grid.css">
-	<link rel="stylesheet" href="../css/icons.css">
+	<link rel="stylesheet" href="css/project.css">
+
 </head>
 <body>
+	<?php
+		include_once '../includes/ui.php';	
+		get_navbar($project_name);
+	?>
 	<div class="grid">
 		<div class="content">
 			<div class="row">
@@ -40,5 +52,35 @@
 			</div>
 		</div>
 	</div>
+	<div class="fade_out"></div>
+	<div class="fade_in"></div>
 </body>
 </html>
+<script src="../js/jquery.js"></script>
+<script>
+	$(document).ready(function () {
+            $(".fade_in").css({"opacity" : "0", "visibility":"hidden"});
+	})
+	$("a[data-href]").click(function () {
+            $(".fade_out").css({"opacity" : "1", "visibility":"visibility"});
+            var link = $(this).attr("data-href");
+            setTimeout(function(){
+                    window.location.href = link;
+            }, 700);
+	})
+</script>
+
+<?php
+	`
+	<div class="row">
+		<div class="col-1"><img src="../img/human_young_woman.png"></div>
+		<div class="col-1"><img src="../img/human_woman.png"></div>
+		<div class="col-1"><img src="../img/Layer 10.png"></div>
+	</div>
+	`
+
+	//создаём rows
+	//в data вставляем его id 
+	//
+
+?>
