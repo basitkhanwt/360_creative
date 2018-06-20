@@ -1,65 +1,32 @@
 <?php
+$_POST['sort'] = "package";
 if(isset($_POST['sort'])){
 	$req = false;
 	$sort = $_POST['sort']; 
-	$req = '<div class="row">
-				<div class="col-1">
-					<div class="project">
-						<a href="#">
-							<img src="projects/project/01.png" alt="photo">
-						</a>
-						<div class="description">
-							<div class="highlighted_text_min">sisters corner</div>
-							<div class="secondary_text"><a href="#">Брендинг</a></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-1">
-					<div class="project">
-						<a href="#">
-							<img src="projects/project/06.png" alt="photo">
-						</a>
-						<div class="description">
-							<div class="highlighted_text_min">Season agriculture</div>
-							<div class="secondary_text"><a href="#">Брендинг</a></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-1">
-					<div class="project">
-						<a data-href="project.php?project=roots-branding" href="project.php?project=roots-branding">
-							<img src="projects/project/06.png" alt="photo">
-						</a>
-						<div class="description">
-							<div class="highlighted_text_min">Season agriculture</div>
-							<div class="secondary_text"><a href="#">Брендинг</a></div>
-						</div>
-					</div>
-				</div>
-			</div>' . $sort;
+	include_once 'mysql.inc.php';
 
-	$projects = array(
-		'project' => array(
-			"id" => "a32s1d165a46sqwe",
-			"company_name" => "sisters corner",
-			"project_type" => "Брендинг",
-			"poster" => "01.png"
-		)
-	);
+	$sort = $mysqli->real_escape_string($sort);
 
-	echo json_encode($projects);
-	exit;
+	$result = $mysqli->query("SELECT * FROM `project` WHERE `project_type` = '$sort'");
+
+
+	
+	while ($row = $result->fetch_assoc()) {
+    	echo $row["id"] . "<br>";
+    	echo $row["project_type"] . "<br>";
+    	echo ;
+	}
+    	
+
+    
+
+	/*if ($mysqli->errno) {
+		die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+	}
+
+	$my_json = json_encode($row); 
+
+	echo $my_json;
+	exit;*/
 }
 
-
-
-?>
-
-<?php
-$array = array(
-    "dimension1" => array(
-        "key1" => "value1",
-        "key2" => "value2"
-    )
-);
-?>

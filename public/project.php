@@ -1,9 +1,7 @@
 <?php 
-	$page_title = "Roots";
-        $project_name = "Roots";
-        function get_navbar($project_name){
-            echo `asdasd`;
-        }
+	if(!$_GET["project"]==""||!$_GET["project"]==""){
+
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>360 creative - branding agency</title>
 	<link rel="stylesheet" href="css/ui.css">
 	<link rel="stylesheet" href="css/main_page.css">
+	<?php include_once 'includes/meta_tags.php'; getMainPageTags();?>
 
-  	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="js/jquery.js"></script>
 </head>
 <body>
@@ -102,10 +101,11 @@
 			</div>	
 		</div>
 	</div>
+	
 </body>
 </html>
 
-<script>
+<script type="text/javascript">
 	$(".burger").click(function () {
 		$(".menu").addClass("active");
 		console.log("open");
@@ -113,62 +113,106 @@
 	$(".menu_close").click(function () {
 		$(".menu").removeClass("active");
 		console.log("close");
-	})
-/*
-	$(`a[href*="sort"]`).click(function (e) {
-		e.preventDefault();
-		$(".project").css({"opacity":"0", "visibility": "hidden"});
-		setTimeout(function() {
-			$(".project").css({"opacity":"1", "visibility": "visible"});
-		}, 1000);
-		return false;
-	})*/
+	});
 </script>
 
 <script>
 	$(document).ready(function () {
 		$(".project").css({"opacity":"1", "visibility": "visible"});
 	});
+
 	$(function(){
-	  var output = $('.content');
-	  $('li[rel]').on('click', function(){
+            var output = $('.content');
+            $('li[rel]').on('click', function(){
 	  	var requester = $(this).attr("rel");
-	  	$(".project").css({"opacity":"0", "visibility": "hidden"});
+	  	console.log(requester);
+	  	$(".project").css({"opacity" : "0", "visibility" : "hidden"});
 	  	setTimeout(function() {
 		    $.ajax({
-				url: 'include/sort.php', 
-				type: 'POS', 
-				dataType: 'jso', 
-				data: {sort : `${requester}`}, 
-				error: function(req, text, error){
-					output.text("Хьюстон, У нас проблемы!");
-					$(function(){
-						$.ajax({
-							url: 'includes/sendMail.php',
-							type: "POST",
-							dataType: "html",
-							data: {send_message : 1, theme : `Ошибка при выборе пункта меню. ошибки: request = ${req}, text: ${text}, error: ${error}`},
-							error: function (req, text, error) {
-								output.append("<br><br>К сожалению администрация не смогла узнать об ошибке, пожалуйста сделайте скриншот и отправьте на support@360creative.com");
-								output.append(text +" || " + error);
-							},
-							success: function () {
-								output.append("<br>Администрация узнала об этом и уже работает над исправлением этой ошибки.");
-							},
-						})
-					});
-				},
+                url: 'includes/sort.php', 
+                type: 'post', 
+                dataType: 'html', 
+                data: {sort : `${requester}`}, 
+                error: function(requester, text, error){
+                    output.text("Хьюстон, У нас проблемы!");
+                    output.append(`<br>req: ${requester} <br> text: ${text} <br> error: ${error}`);
+                    $(function(){
+                        $.ajax({
+                            url: 'includes/sendMail.php',
+                            type: "POST",
+                            dataType: "json",
+                            data: {send_message : 1, theme : `Ошибка при выборе пункта меню. ошибки: request = ${requester}, text: ${text}, error: ${error}`},
+                            error: function (requester, text, error) {
+                                    output.append("<br><br>К сожалению администрация не смогла узнать об ошибке, пожалуйста сделайте скриншот и отправьте на support@360creative.com");
+                                    output.append(text +" || " + error  +" || " + requester );
+                            },
+                            success: function (data) {
+                                if (data === true) {
+                                        output.append("<br>Администрация узнала об этом и уже работает над исправлением этой ошибки.");
+                                }
+                            }
+                        });
+                    });
+                },
 
-				success: function(json){ 
-					$(".project").remove();
+                success: function(projects_data){ 
+                    $(".project").remove();
+                    obj = JSON.parse(projects_data);
+                    output.html(projects_data); 
 
-					// output.html(json); 
-					// setTimeout(function() {
-					// 	$(".project").css({"opacity":"1", "visibility": "visible"});
-					// }, 300);
-				}
+
+                    output.append("<br><br>id: " + obj.id);
+                    output.append("<br>id: " + obj.id);
+                    output.append("<br>id: " + obj.id);
+                    output.append("<br>id: " + obj.id);
+                    output.append("<br><br><br><br>");
+
+                    for (var key in obj) {
+						output.append("<br>" + key + ": " + obj[key]);
+					}
+					//$(".project").css({"opacity":"1", "visibility": "visible"});
+                }
 		    });
 		}, 300);
 	  });
 	});
 </script>
+
+<?php 
+
+	// $req = '<div class="row">
+	// 			<div class="col-1">
+	// 				<div class="project">
+	// 					<a href="#">
+	// 						<img src="projects/project/01.png" alt="photo">
+	// 					</a>
+	// 					<div class="description">
+	// 						<div class="highlighted_text_min">sisters corner</div>
+	// 						<div class="secondary_text"><a href="#">Брендинг</a></div>
+	// 					</div>
+	// 				</div>
+	// 			</div>
+	// 			<div class="col-1">
+	// 				<div class="project">
+	// 					<a href="#">
+	// 						<img src="projects/project/06.png" alt="photo">
+	// 					</a>
+	// 					<div class="description">
+	// 						<div class="highlighted_text_min">Season agriculture</div>
+	// 						<div class="secondary_text"><a href="#">Брендинг</a></div>
+	// 					</div>
+	// 				</div>
+	// 			</div>
+	// 			<div class="col-1">
+	// 				<div class="project">
+	// 					<a data-href="project.php?project=roots-branding" href="project.php?project=roots-branding">
+	// 						<img src="projects/project/06.png" alt="photo">
+	// 					</a>
+	// 					<div class="description">
+	// 						<div class="highlighted_text_min">Season agriculture</div>
+	// 						<div class="secondary_text"><a href="#">Брендинг</a></div>
+	// 					</div>
+	// 				</div>
+	// 			</div>
+	// 		</div>' . $sort;
+ ?>
